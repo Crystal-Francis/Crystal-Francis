@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>Payment</title>
+        <style>
+            body{
+                background-image:url('images/earth-sunset-beach-ocean-purple-hd-wallpaper-preview.jpg');
+                background-size: 1515px;
+            }
+            .myDiv {
+              border-radius: 25px;
+              margin: 100;
+              border: 4px solid black;
+              background-color: plum;
+              background-image: linear-gradient(180deg, rgb(252, 196, 93), rgb(117, 14, 177));  
+              width: 650; 
+              height: 400; 
+              text-align: center;
+              
+            }
+            input[type='button'] {
+                width: 90%;
+                background-color: white;
+                border: none;
+                color: black;
+                padding: 10px 32px;
+                text-align: center;
+                display: inline-flexbox;
+                font-size: 17px;
+                margin: 25px 3px;
+                cursor: pointer;
+                border-radius: 25px;
+                box-shadow: 0 5px 30px white;
+                transition: 0.5s;
+            }
+
+            input[type=button]:hover {
+            background-color: black;
+            color: white;
+            }
+            input[type='text'] {
+                height: 37px;
+                font-size: 14pt;
+            }
+            .title {
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 35px;
+                color: white;
+            }
+            .slash {
+                color: white;
+                font-size: 35px;
+            }
+            .text {
+                color: white;
+                font-size: 23px;
+                font-family: sans-serif;
+            }
+            select {
+                width: 125%;
+                height: 37px;
+                font-size: 13pt;
+            }
+        </style>
+        
+        <script language="JavaScript">
+            function sendDetails() {
+                var cardnumber = document.Details.cardnumber;
+                if (cardnumber.value == "" || cardnumber.value.length != 16 || isNaN(cardnumber.value)) {
+                    alert("Please enter a valid Card Number");
+                    return false;
+                }
+                var firstName = document.Details.name;
+                if (firstName.value == "") {
+                    alert("Please enter your name");
+                    return false;
+                }
+                var expirymonth = document.Details.expirymonth;
+                if (expirymonth.value == '' || isNaN(expirymonth.value) || expirymonth.value > 12) {
+                    alert('Please enter a valid expiry month');
+                    return false;
+                }
+                var expiryyear = document.Details.expiryyear;
+                if (expiryyear.value == '' || isNaN(expiryyear.value) || expiryyear.value < 22
+                 || expiryyear.value > 25) {
+                    alert('Please enter a valid expiry year');
+                    return false;
+                }
+                var cvv = document.Details.cvv;
+                if (cvv.value == "" || 4 < cvv.value.length || cvv.value.length < 3 || isNaN(cvv.value)) {
+                    alert('Please enter a valid CVV');
+                    return false;
+                }
+                document.Details.submit();
+            }
+</script>
+    </head>
+    <body>
+        <center>
+        <br><br><br><br><br><br><br>
+        <div width="50"></div>
+        <div class="myDiv">
+        <h2 class="title"><i>&emsp;Payment Details</i></h2>
+        <form name="Details" action="connect.php">
+        <Table>
+            <tr>
+                <td class="text">Card Number:</td>
+                <td class="text"> Card Type:</td>
+            </tr>            
+            <tr>
+                <td><input type="text" name="cardnumber"
+                     placeholder="• • • •              • • • •              • • • •               • • • •" 
+                    maxlength="16" size="35" id="cardnumber"></td>
+                    <td>
+                        <select name="cardtype" id="cardtype">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">MasterCard</option>
+                            <option value="discover">Discover</option>
+                    </td>
+            </tr>
+            </Table>
+            <Table>
+            <tr>
+                <br>
+                <td><input type="text" name="name" placeholder="NAME ON CARD" id="name"></td>
+                <td><input type="text" name="expirymonth" placeholder="MM" maxlength="2" size="1" id="expirymonth"></td>
+                <td class="slash">/</td>
+                <td><input type="text" name="expiryyear" placeholder="YY" maxlength="2" size="1" id="expiryyear"></td>
+                <td><input type="text" name="cvv" placeholder="CVV" maxlength="4" size="6" id="cvv"></td>
+            </tr>
+        </Table>
+        <br>
+        <br>
+        <br>
+        <input type ="button" onclick = "sendDetails()" value ="Submit Payment">
+        
+        </form>
+    </div>
+</center>
+    </body>
+</html>
