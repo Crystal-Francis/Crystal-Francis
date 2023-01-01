@@ -1,0 +1,410 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <title>Portfolio - Crystal Teresa Francis</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins';
+                scroll-behavior: smooth;
+            }
+            body {
+                background: linear-gradient(rgb(24, 55, 96), pink);
+                min-width: 100vh;
+                overflow-x: hidden;
+            }
+            header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 30px 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            header .logo {
+                 color: white;
+                 font-weight: 700;
+                 text-decoration: none;
+                 font-size: 2vw;
+                 text-transform: uppercase;
+                 letter-spacing: 2px;
+                 z-index: 10000;
+            }
+            header ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            header ul li {
+                list-style: none;
+                margin-left: 20px;
+            }
+            header ul li a {
+                text-decoration: none;
+                padding: 6px 15px;
+                color: white;
+                border-radius: 20px;
+                font-size: 1.5vw;
+            }
+            header ul li a:hover,
+            header ul li a.active {
+                background: white;
+                color: rgb(24, 55, 96);
+            }
+            section {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                padding: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            section::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(to top, rgb(24, 55, 96), transparent);
+                z-index: 1000;
+            }
+            section img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
+            #text {
+                position: absolute;
+                color: white;
+                white-space: nowrap;
+                font-size: 7.5vw;
+                z-index: -1;
+            }
+            section img#front-buildings {
+                z-index: 10;
+            }
+            .sec {
+                position: relative;
+                padding: 100px;
+                background: rgb(24, 55, 96);
+                color: white;
+            }
+            .sec h2 {
+                font-size: 8.1vw;
+                margin-bottom: 10px;
+                color: white;
+            }
+            .project-info {
+                color: white;
+                font-size: 2vw;
+                position: absolute;
+                top: 25vw;
+            }
+            button {
+                font-size: 1.5vw;
+                font-family: 'Poppins';
+                border-radius: 5px;
+                background: pink;
+                color: rgb(24, 55, 96);
+                border: 0.15vw solid pink;
+                padding: 1.1vw 1vw;
+                margin: 1.08vw;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                top: 13vw;
+                left: 7vw;
+                }
+            button:hover {
+                color: pink;
+            }
+            button::after {
+                content: "";
+                background: rgb(24, 55, 96);
+                position: absolute;
+                z-index: -1;
+                padding: 0.85em 0.75em;
+                display: block;
+            }
+            button[class^="slide"]::after {
+                transition: all 0.35s;
+            }
+            button[class^="slide"]:hover::after {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                transition: all 0.35s;
+            }
+            button.slide_from_left::after {
+                top: 0;
+                bottom: 0;
+                left: -100%;
+                right: 100%;
+            }
+            .certtitle{
+                color: white;
+                font-size: 2vw;
+            }
+            #aboutme {
+                color: white;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100px;
+                background: transparent;
+                z-index: 1000;
+                border: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <img src="./images/stars.png" id="stars">
+            <img src="./images/moon3.png" id="moon" style="height: 25vw;
+            width: auto;left: 30vw;z-index: -9;">
+            <img src="./images/back-buildings.png" id="back_buildings">
+            <h2 id="text" style="top: 15vw;">Portfolio</h2>
+            <img src="./images/front-buildings.png" id="front_buildings">
+        </section>
+        <header>
+            <p class="logo">Crystal Teresa Francis</p>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+            </ul>
+        </header>
+        <div class="sec" id="sec">
+            <div id="projects">
+                <hr style="border: none;border-top: dotted 0.5vw;">
+            <center><h2>Projects</h2></center>
+            <hr style="border: none;border-top: dotted 0.5vw;">
+            <p class="project-info">Credit Card Payment Page</p>
+            <p class="project-info" style="left: 43vw;">Ecommerce Store</p>
+            <p class="project-info" style="right: 10vw;">Quiz Application</p>
+            <p class="project-info" style="top:29vw;">(HTML, CSS, JS, PHP, SQL)</p>
+            <p class="project-info" style="top:29vw;left: 40vw;">(HTML, CSS, JS, PHP, SQL)</p>
+            <p class="project-info" style="top:29vw;right: 5vw;">(HTML, CSS, JS, PHP, SQL)</p>
+            <a href="information1.html"><button class="slide_from_left">&nbsp;CODE&nbsp;</button></a>
+            <a href="information2.html"><button class="slide_from_left" style="left: 29.5vw;">&nbsp;CODE&nbsp;</button></a>
+            <a href="information3.html"><button class="slide_from_left" style="left: 50vw;">&nbsp;CODE&nbsp;</button></a>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div id="certifications">
+            <hr style="border: none;border-top: dotted 0.5vw;">
+            <center><h2>Certifications</h2>
+            <a href="https://drive.google.com/drive/folders/1I38JmoyLb_8srwIc-yICILiVG31_et4j"
+            style="color: white;font-size: 2vw;">
+                View in Google Drive</a><br><br></center>
+            <hr style="border: none;border-top: dotted 0.5vw;">
+            <table>
+                <center><h1 style="font-size: 3.0vw;"><u>Courses</u></h1></center><br><br>
+                <tr>
+                    <td class="certtitle">Codecademy HTML<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;</td>
+                    <td class="certtitle">Codecademy CSS<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;</td>
+                    <td class="certtitle">Codecademy SQL<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;</td>
+                    <td class="certtitle">Codecademy JS<br>Certificate</td>
+                </tr>
+                </table>
+                <table>
+                <tr>
+                    <td><br></td>
+                </tr>
+                </table>
+                <table>
+                <tr>
+                    <td><img src="certificationimages/htmlcertificate.png" alt="HTML Codecademy Certificate"
+                        style="width:19vw; height:15.2vw;"/></td>
+                        <td>&emsp;&emsp;&emsp;&ensp;</td>
+                    <td><img src="certificationimages/csscert.png" alt="CSS Codecademy Certificate"
+                        style="width:19vw; height:15.2vw;"></td>
+                        <td>&emsp;&emsp;&ensp;</td>
+                    <td><img src="certificationimages/sqlcert.png" alt="SQL Codecademy Certificate"
+                        style="width:19vw; height:15.2vw;"></td>
+                        <td>&emsp;&emsp;&nbsp;</td>
+                    <td><img src="certificationimages/javascriptcert.png" alt="JS Codecademy Certificate"
+                        style="width:19vw; height:15.2vw;"/></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <br><br>
+                    <td class="certtitle">Codecademy<br>Bootstrap<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;</td>
+                    <td class="certtitle">Codecademy<br>jQuery<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+                    <td class="certtitle">Codecademy<br>PHP<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</td>
+                    <td class="certtitle">Udemy Web<br>Development<br>Certificate</td>
+                </tr>
+            </table>
+            <table>
+            <tr>
+                <td><br></td>
+            </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="certificationimages/bootstrap.png"
+                         alt="Bootstrap Codecademy Certificate"
+                        style="width:19vw; height:15.2vw;"/></td>
+                        <td>&emsp;&emsp;&emsp;&ensp;</td>
+                    <td><img src="./certificationimages/jquerycert.png"
+                         alt="jQuery Codecademy Certificate"
+                         style="width:19vw; height:15.2vw;"></td>
+                         <td>&emsp;&emsp;&ensp;</td>
+                    <td><img src="./certificationimages/blankcert.png"
+                         alt="PHP Codecademy Certificate"
+                         style="width:19vw; height:15.2vw;"></td>
+                         <td>&emsp;&emsp;&nbsp;</td>
+                    <td><img src="./certificationimages/blankcert.png"
+                        alt="PHP Codecademy Certificate"
+                        style="width:19vw; height:15.2vw;"></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><br></td>
+                </tr>
+            </table>
+            <br><br>
+            <center><h1 style="font-size: 45px;position: absolute;top: 128vw;right: 39vw;
+                "><u>Competitons</u></h1><br><br>
+            <table>
+                <tr>
+                    <td class="certtitle" style="position: absolute;top: 135vw;left: 17.5vw;"
+                    >SASMO Silver Award<br>Certificate</td>
+                    <td>&emsp;&emsp;&emsp;</td>
+                    <td class="certtitle" style="position: absolute;top: 135vw;left: 41vw;"
+                    >NMOS 2022 Certificate<br>(Honourable Mention)</td>
+                    <td>&emsp;&emsp;&emsp;</td>
+                    <td class="certtitle" style="position: absolute;top: 135vw;left: 66.4vw;"
+                    >Raffles Science<br>Olyimpiad 2022</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><br></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="./certificationimages/sasmocertifaction.png"
+                        alt="SASMO Silver Award Certificate"
+                        style="width:19.6vw; height:15.2vw;position: absolute;
+                        top: 145vw;left: 17.5vw;"></td>
+                    <td><img src="./certificationimages/nmos.png"
+                        alt="NMOS 2022 Honourable Mention Certificate"
+                        style="width:19.6vw; height:15.2vw;position: absolute;
+                        top: 145vw;left: 41vw;"></td>
+                        <td>&ensp;</td>
+                        <td><img src="certificationimages/rafflesscienceolyimpiad.png"
+                            alt="Raffles Science Olyimpiad 2022 Participation Certificate"
+                  style="width:15.2vw; height:20.1vw;position: absolute;
+                  top: 143vw;left: 66.4vw;"></td>
+                </tr>
+            </table>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
+        <hr style="border: none;border-top: dotted 0.5vw;">
+        </div>
+        <div id="aboutme"><br>
+            <center><h2 style="font-size: 8.1vw;">About Me</h2></center><br>
+            <center><hr style="border: none;border-top: dotted 0.5vw;width: 85vw;"></center>
+            <br>
+            <p style="font-size: 1.7vw;">
+              &emsp; I am Crystal Francis, an 11-year-old girl studying at Jing shan Primary. <br>
+              &emsp; You are viewing my Portfolio I created by myself using HTML and CSS.
+                  </p><br>
+                  <p class="p" style="font-size: 1.52vw;">
+                      <b style="font-size: 2vw;">&nbsp;&nbsp; Python</b><br><br>
+                      &emsp; I started learning Python in June 2021. My brother introduced it to me as he was also <br>
+                      &emsp; studying it for his computing class. After watching a tutorial, I created my very first <br>
+                      &emsp; Python program. The program would find the user's age when the birth year was given.<br>
+                      &emsp; I then started creating projects using math topics such as finding the area of a sphere<br>
+                      &emsp; when the radius was specified. Afterward, I created the program that I was the proudest of,<br>
+                      &emsp; it would determine the HCF or LCM of two numbers.
+                  <p class="p" style="font-size: 1.52vw;"><br>
+                      <b style="font-size: 2vw;">&nbsp;&nbsp; Linux</b><br><br>
+                      &emsp; After getting my new computer in April 2022, my brother had the idea of booting Linux as my <br>
+                      &emsp; operating system (OS). After doing so, I went online to learn basic Linux commands.
+                      </p><br>
+                  </p>
+                  <p class="p" style="font-size: 1.52vw;">
+                      <b style="font-size: 2vw;">&nbsp;&nbsp; Web Development</b><br><br>
+                      &emsp; I figured to get into a secondary school via DSA. I would have to make a portfolio. While, <br>
+                      &emsp; I searched for websites to create portfolios. I stumbled upon <br>
+                      &emsp; a revolutionary web creation platform called EditorX.<br>
+                      &emsp; After reading about EditorX online, I discovered that it was launched in February 2020 by Wix,<br>
+                      &emsp; a Web development company. Afterward, I searched Web Development and learned that it's the work<br>
+                      &emsp; that happens behind the scenes to make a website look good. To be a web developer, I would need to study these<br>
+                      &emsp; 3 main languages, JavaScript, a programming language, HTML, a markup language,<br>
+                      &emsp; and CSS, a style sheet language. I decided to make a portfolio using these three languages.
+                      </p><br>
+                  <p class="p" style="font-size: 1.52vw;">
+                      <b style="font-size: 2vw;">&nbsp;&nbsp; JavaScript</b><br><br>
+                      &emsp; In May 2022, I completed the JavaScript course on Codecademy, a platform that offers free <br>
+                      &emsp; coding classes. I did not have Pro or Pro Lite access to receive a,<br>
+                      &emsp; certificate of completion. I used JavaScript for my Payment details and Ecommerce store. <br>
+                      &emsp; Which also included PHP, SQL, HTML, and CSS. I have only finished one course out of 47 of them in JavaScript.<br>
+                      &emsp; Around December 2022. I learnt jQuery, a JavaScript framework, to add effects to my projects.
+                      </p><br>
+                      <p class="p" style="font-size: 1.52vw;">
+                          <b style="font-size: 2vw;">&nbsp;&nbsp; HTML</b><br><br>
+                          &emsp; After finishing part of the HTML course in Codecademy, I went on to download Visual Studio Code (vscode)<br>
+                          &emsp; to create my portfolio. And when I was not sure about certain tags, I would look them up on the web<br>
+                          &emsp; and learn something new. I then finished the HTML course in July 2022.
+                          </p>
+                      <p class="p" style="font-size: 1.52vw;"><br>
+                          <b style="font-size: 2vw;">&nbsp;&nbsp; CSS</b><br><br>
+                          &emsp; I learned CSS in the process of learning HTML. When creating my portfolio, I wanted to style my page.<br>
+                          &emsp; After looking it up, I learned about CSS properties. I then completed the CSS course in August 2022.<br>
+                          &emsp; In November, I learnt Bootstrap, a CSS framework and received a certificate of completion from Codecademy.
+            </p>
+                      <p class="p" style="font-size: 1.52vw;"><br>
+                        <b style="font-size: 2vw;">&nbsp;&nbsp; mySQL</b><br><br>
+                        &emsp; After creating my Credit Card Payment Page, I did not know where to store the user's information.<br>
+                        &emsp; I browsed the Internet and learning about mySQL, an open-source relational database management system. <br>
+                        &emsp; I took a course on Codecademy that helped me learn about clauses.
+                    </p>
+                    <p class="p" style="font-size: 1.52vw;"><br>
+                      <b style="font-size: 2vw;">&nbsp;&nbsp; PHP</b><br><br>
+                      &emsp; I had to connect my code to the database using PHP. Watching a video helped me with the basics of PHP.<br>
+                      &emsp;
+                  </p>
+          </div>
+
+        <script language="JavaScript">
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let back_buildings = document.getElementById('back_buildings');
+            let text = document.getElementById('text');
+            let front_buildings = document.getElementById('front_buildings');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.01 + 'vw';
+                moon.style.top = value * 0.035 + 'vw';
+                back_buildings.style.top = value * 0.02 + 'vw';
+                front_buildings.style.top = value * 0 + 'vw';
+                text.style.marginTop = value * 0.04 + 'vw';
+            })
+        </script>
+    </body>
+</html>
